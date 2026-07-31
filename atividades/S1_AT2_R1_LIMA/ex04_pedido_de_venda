@@ -1,0 +1,28 @@
+<!--Exercício 4: Pedido de Venda
+Analise o Código
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pedido>
+<cliente>
+<nome>Maria</nome>
+<itens>
+<item>Notebook</item>
+<item>Mouse</item>
+</cliente>
+</itens>
+</pedido-->
+
+
+O código apresenta erros na linha 6 e 9, precisamos inverter as tags <itens> e <clientes>, e também descer os itens.
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pedido>
+<cliente>
+<nome>Maria</nome>
+</cliente>
+<itens>
+<item>Notebook</item>
+<item>Mouse</item>
+</itens>
+</pedido>

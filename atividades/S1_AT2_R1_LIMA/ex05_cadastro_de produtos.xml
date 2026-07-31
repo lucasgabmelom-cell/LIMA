@@ -1,0 +1,20 @@
+<!--Exercício 5: Cadastro de Produtos
+Analise o Código
+<?xml version="1.0" encoding="UTF-8"?>
+
+<produtos>
+
+<nome produto>Notebook</nome produto>
+
+<1preco>4500</1preco>
+
+</produtos-->
+
+O codigo apresenta dois erros, o primeiro nome produto que no meio deve haver um underline e o segundo
+o preço que esta escrito errado tem que ser <preco>.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<produtos>
+<nome_produto>Notebook</nome_produto>
+<preco>4500</preco>
+</produtos>

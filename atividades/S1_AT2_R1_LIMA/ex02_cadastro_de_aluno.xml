@@ -1,0 +1,17 @@
+<!--Exercício 2: Cadastro de Aluno
+Analise o Código
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aluno matricula=202501 curso="Informática">
+<nome>João Silva</nome>
+<idade=20></idade>
+</aluno-->
+
+O código na tag <idade=20> está incorreto, porque, esta escrito como idade=20, o 20 tem estar entre <idade> e </titulo>.
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<aluno matricula=202501 curso="Informática">
+<nome>João Silva</nome>
+<idade>20</idade>
+</aluno>

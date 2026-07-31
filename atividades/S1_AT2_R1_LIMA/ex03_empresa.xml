@@ -1,0 +1,18 @@
+<!--Exercício 3: Empresa
+Analise o Código
+<?xml version=1.0 encoding="UTF-8">
+
+<empresa>
+<nome>Tech & Sistemas</nome>
+<cidade>Curitiba</cidade>
+</empresa-->
+
+O código apresenta dois erros, na primeira linha do código no version a resposta tem que estar em aspas("1.0"), 
+no final da mesma linha tem que ter interrogação(?) e está incorreto (&) tem que ser escrito (&amp;).
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<empresa>
+<nome>Tech &amp; Sistemas</nome>
+<cidade>Curitiba</cidade>
+</empresa>
