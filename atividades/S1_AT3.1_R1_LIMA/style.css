@@ -1,0 +1,9 @@
+body{
+    font-family: cursive;
+    background-color: lightblue;
+}
+.titulo h1{
+    color:aqua;
+    font-size: 36px;
+    text-align: center;
+}
