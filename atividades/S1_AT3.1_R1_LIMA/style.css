@@ -2,8 +2,8 @@ body{
     font-family: cursive;
     background-color: lightblue;
 }
-.titulo h1{
-    color:aqua;
+.título_h1, #paragrafo{
+    color: rgb(255, 255, 255);
     font-size: 36px;
-    text-align: center;
+    text-align: left;
 }
