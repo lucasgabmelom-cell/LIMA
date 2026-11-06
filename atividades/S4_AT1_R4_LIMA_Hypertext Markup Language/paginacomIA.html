@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PixelGear - Loja especializada em PC Gamer, Periféricos e Setups eSports.">
+    <title>PixelGear eSports | High Performance Gaming</title>
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #161b22;
+            --accent-color: #00ff87;
+            --accent-hover: #60efff;
+            --text-color: #e6edf3;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            background: linear-gradient(180deg, #161b22 0%, var(--bg-color) 100%);
+            border-bottom: 2px solid var(--accent-color);
+            border-radius: 12px 12px 0 0;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 12px rgba(0, 255, 135, 0.3);
+        }
+
+        header p.tagline {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 30px 0;
+        }
+
+        /* Seção Sobre a Loja */
+        .sobre-loja {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 25px;
+        }
+
+        .sobre-loja p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .diferencial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .diferencial-card h4 {
+            color: var(--accent-hover);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .diferencial-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* Grid de Produtos */
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .produto {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .produto:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 20px rgba(0, 255, 135, 0.1);
+        }
+
+        .produto img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 6px;
+            background-color: #0d1117;
+            padding: 10px;
+            margin-bottom: 12px;
+        }
+
+        .produto h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .produto p {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        /* Formulário */
+        form {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        fieldset {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        legend {
+            color: var(--accent-color);
+            padding: 0 10px;
+            font-weight: bold;
+        }
+
+        form p {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        select, textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0d1117;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-color);
+            margin-top: 6px;
+            font-size: 0.95rem;
+        }
+
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: var(--accent-color);
+            margin-right: 8px;
+            transform: scale(1.1);
+            vertical-align: middle;
+        }
+
+        .botoes-form {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s ease, transform 0.1s ease;
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(90deg, #00ff87, #60efff);
+            color: #000000;
+            flex: 2;
+        }
+
+        button[type="reset"] {
+            background-color: #21262d;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            flex: 1;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: scale(1.01);
+        }
+
+        /* WhatsApp */
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd56;
+            transform: scale(1.03);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PixelGear eSports</h1>
+        <p class="tagline">O seu destino definitivo para hardware de ponta e periféricos de alta performance.</p>
+    </header>
+
+    <main>
+        <!-- Introdução / Sobre a Loja -->
+        <section class="sobre-loja">
+            <h2>Sobre a PixelGear</h2>
+            <p>
+                Nascida no coração da cena eSports, a <strong>PixelGear</strong> é feita por gamers, para gamers. Nossa missão é fornecer o hardware mais rápido, durável e preciso do mercado, garantindo que a sua única preocupação seja dominar a partida.
+            </p>
+            <p>
+                Seja para montar uma máquina de elite para campeonatos competitivos, criar um ambiente de live streaming de alta qualidade ou otimizar seu setup de trabalho e criação 3D, oferecemos consultoria técnica personalizada e peças homologadas pelos melhores fabricantes do mundo.
+            </p>
+
+            <div class="diferenciais-grid">
+                <div class="diferencial-card">
+                    <h4>⚡ Máximo Desempenho</h4>
+                    <p>Componentes de última geração testados sob estresse extremo.</p>
+                </div>
+                <div class="diferencial-card">
+                    <h4>🛠️ Montagem Customizada</h4>
+                    <p>Cable management profissional e otimização fina de BIOS/sistema.</p>
+                </div>
+                <div class="diferencial-card">
+                    <h4>🛡️ Garantia PixelGear Care</h4>
+                    <p>Suporte técnico especializado pós-venda direto com nossa equipe.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Produtos -->
+        <section>
+            <h2>Produtos em Alta</h2>
+
+            <div class="produtos-grid">
+                <div class="produto">
+                    <img src="https://images.kabum.com.br/produtos/fotos/sync_mirakl/819862/xlarge/PC-Gamer-Gabinete-Aqu-rio-Branco-Ryzen-7-5700x-RTX-5060-8GB-16gb-Ram-SSD-1TB-Water-Cooler-240mm-Win11-Pro_1768055618.jpg" alt="Gabinete Aquário Branco">
+                    <h3>1. Gabinete Aquário Branco</h3>
+                    <p>R$ 7.999,00</p>
+                </div>
+
+                <div class="produto">
+                    <img src="https://a-static.mlcdn.com.br/%7Bw%7Dx%7Bh%7D/teclado-magnetico-gamer-attack-shark-x68-he-rapid-trigger-8000hz-0-005mm-65-moonlight-cinza-branco-as-x68he-mn/kabum/904388/346c35ff080e41e01a092b109e8386db.jpeg" alt="Teclado Attack Shark x68 Magnético">
+                    <h3>2. Teclado Attack Shark x68 Magnético</h3>
+                    <p>R$ 299,00</p>
+                </div>
+
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86ek9awZUCMecm6vWz4VJO-YuAUy5JZ4tk_3g09_Qmg&s=10" alt="Mouse Gamer ATTACK SHARK X11">
+                    <h3>3. Mouse Gamer Attack Shark x11</h3>
+                    <p>R$ 180,00</p>
+                </div>
+
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZxHNkYEOzwOawG4BAxlYrq9N5YR8GmrExxy7nxJqsg&s=10" alt="Headset Gamer Sem Fio Logitech G733">
+                    <h3>4. Headset Gamer Sem Fio Logitech G733</h3>
+                    <p>R$ 250,00</p>
+                </div>
+
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5aDuWHScsJ7tCeuNjvPeCq4mIgMWpESAsYUHA87gQCw&s" alt="Monitor Gamer Curvo 240Hz">
+                    <h3>5. Monitor Gamer Curvo 240Hz</h3>
+                    <p>R$ 2.199,00</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Formulário de Personalização e Orçamento -->
+        <section>
+            <h2>Solicite seu Orçamento Personalizado</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Preferências do Hardware</legend>
+
+                    <p>
+                        <label for="gpu">Escolha a Placa de Vídeo Principal:*</label><br>
+                        <select id="gpu" name="gpu" required>
+                            <option value="">-- Selecione uma GPU --</option>
+                            <option value="gtx1650">NVIDIA GTX 1650 4GB (Entry)</option>
+                            <option value="rtx4060ti">NVIDIA RTX 4060 Ti 8GB (Mid-Range)</option>
+                            <option value="rtx4090">NVIDIA RTX 4090 24GB (High-End 4K)</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <strong>Objetivo Principal da Máquina:*</strong><br>
+                        <label><input type="radio" id="jogos" name="objetivo" value="jogos" checked> Jogos Eletrônicos / eSports</label><br>
+                        <label><input type="radio" id="streaming" name="objetivo" value="streaming"> Live Stream / Criação de Conteúdo</label><br>
+                        <label><input type="radio" id="trabalho" name="objetivo" value="trabalho"> Edição de Vídeo 3D / Arquitetura</label>
+                    </p>
+
+                    <p>
+                        <strong>Serviços e Adicionais Desejados:</strong><br>
+                        <label><input type="checkbox" id="rgb" name="adicionais[]" value="rgb_extra"> Fitas de LED RGB Adicionais no Gabinete</label><br>
+                        <label><input type="checkbox" id="overclock" name="adicionais[]" value="overclock"> Perfil de Overclock Configurado na BIOS</label><br>
+                        <label><input type="checkbox" id="garantia_estendida" name="adicionais[]" value="garantia3anos"> Garantia Estendida de 3 Anos PixelGear Care</label>
+                    </p>
+
+                    <p>
+                        <label for="observacoes">Observações ou Dúvidas Específicas:</label><br>
+                        <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva jogos específicos que pretende rodar ou preferências de marcas..."></textarea>
+                    </p>
+
+                    <p>
+                        <label for="foto_referencia">Anexar Print ou Foto do Setup de Referência:</label><br>
+                        <input type="file" id="foto_referencia" name="foto_referencia" accept="image/*">
+                    </p>
+                </fieldset>
+
+                <div class="botoes-form">
+                    <button type="submit">🚀 ENVIAR SOLICITAÇÃO DE ORÇAMENTO</button>
+                    <button type="reset">🧹 Limpar Campos</button>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Atendimento -->
+        <section>
+            <h2>Atendimento e Vendas</h2>
+            <p>Dúvidas ou quer fechar seu pedido? Fale direto com a gente:</p>
+            <a href="https://web.whatsapp.com" target="_blank" class="btn-whatsapp">
+                💬 COMPRAR AGORA VIA WHATSAPP
+            </a>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><i>"Desempenho não é um luxo, é uma necessidade."</i> — <small>PixelGear Team 2026</small></p>
+    </footer>
+
+</body>
+</html>
