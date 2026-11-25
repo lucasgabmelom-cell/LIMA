@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProFit eSports - Artigos Esportivos para o seu melhor desempenho.">
+    <title>ProFit eSports</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #000000; color: #ffffff; font-family: sans-serif; }
+        a { color: #00d2ff; }
+        hr { border: 0; border-top: 1px solid #333333; }
+        input, select, textarea, button { background-color: #1a1a1a; color: #ffffff; border: 1px solid #444444; padding: 6px; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ProFit eSports</h1>
+        <p><strong>Bem-vindo à ProFit eSports!</strong> O melhor para o seu desempenho no treino.</p>
+    </header>
+    <hr>
+
+    <main>
+        <section>
+            <h2>Produtos em Alta</h2>
+            <div class="produto">
+                <h3>1. Bola Copa de 2022</h3>
+                <p>Preço: R$ 249,99</p>
+                <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9d6ea8a996cf41449a37d5f8346f8d33_9366/Bola_Trionda_Competition_Copa_do_Mundo_da_FIFA_26tm_Branco_JD8031_02_standard.jpg" alt="Bola Copa de 2022" width="300">
+            </div>
+            <div class="produto">
+                <h3>2. Luva de Boxe</h3>
+                <p>Preço: R$ 179,00</p>
+                <img src="https://images.tcdn.com.br/img/img_prod/450883/luvas_boxe_muay_thai_caveira_fheras_12_14_o_1_20260112142856_0e17625cffd2.jpg" alt="Luva de Boxe" width="300">
+            </div>
+            <div class="produto">
+                <h3>3. Chuteira de Campo</h3>
+                <p>Preço: R$ 329,99</p>
+                <img src="https://imgnike-a.akamaihd.net/768x768/060765IEA1.jpg" alt="Chuteira de Campo" width="300">
+            </div>
+            <div class="produto">
+                <h3>4. Tenis de corrida</h3>
+                <p>Preço: R$ 299,99</p>
+                <img src="https://imgcentauro-a.akamaihd.net/1024x1024/9974ABH3A2.jpg" alt="Tenis de corrida" width="300">
+            </div>
+            <div class="produto">
+                <h3>5. Camiseta Dri Fit</h3>
+                <p>Preço: R$ 69,99</p>
+                <img src="https://imgcentauro-a.akamaihd.net/1024x1024/9971A102A6.jpg" alt="Camiseta Dri Fit" width="300">
+            </div>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Escolha suas opções</h2>
+            <p>Selecione os produtos que deseja adicionar ao seu carrinho:</p>
+            <form action="#" method="POST">
+                <p>
+                    <label for="produto">Produto:</label>
+                    <select id="produto" name="produto">
+                        <option value="">Selecione um produto</option>
+                        <option value="bola">Bola Copa de 2022</option>
+                        <option value="luva">Luva de Boxe</option>
+                        <option value="chuteira">Chuteira de Campo</option>
+                        <option value="tenis">Tenis de corrida</option>
+                        <option value="camiseta">Camiseta Dri Fit</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" max="10" style="width: 60px;">
+                </p>
+                <p><button type="submit">Adicionar ao carrinho</button></p>
+            </form>
+
+            <h2>Preços</h2>
+            <ul>
+                <li><strong>Bola Copa de 2022: R$ 249,99</strong></li>
+                <li><strong>Luva de Boxe: R$ 179,00</strong></li>
+                <li><strong>Chuteira de Campo: R$ 329,99</strong></li>
+                <li><strong>Tenis de corrida: R$ 299,99</strong></li>
+                <li><strong>Camiseta Dri Fit: R$ 69,99</strong></li>
+            </ul>
+
+            <h2>Ofertas Especiais</h2>
+            <dl>
+                <dt><strong>Combo de chuteira e bola com desconto: R$ 499,99</strong></dt>
+                <dd>Leve a Chuteira de Campo + Bola Copa de 2022 com desconto exclusivo.</dd>
+                <dt><strong>Camiseta Dri Fit com desconto: R$ 59,99</strong></dt>
+                <dd>Tecido respirável com promoção válida para pagamentos à vista.</dd>
+            </dl>
+            <hr>
+
+            <h2>Características Técnicas dos Produtos</h2>
+            <table width="100%" cellpadding="8" cellspacing="2" border="1" bgcolor="#111111">
+                <caption>Tabela de Especificações e Disponibilidade - ProFit eSports</caption>
+                <thead>
+                    <tr bgcolor="#1f1f1f" style="background-image: linear-gradient(rgba(0,210,255,0.2), rgba(0,0,0,0.9));">
+                        <th width="22%" height="35" align="center">Produto</th>
+                        <th width="15%" align="center">Preço</th>
+                        <th width="45%" align="center">Descrição</th>
+                        <th width="18%" align="center">Disponibilidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left" valign="middle">Bola Copa de 2022</td>
+                        <td align="left" valign="middle">R$ 249,99</td>
+                        <td align="left" valign="middle">Bola oficial de tamanho 5, perfeita para treinos e jogos.</td>
+                        <td rowspan="2" align="left" valign="middle" bgcolor="#161616">Em estoque</td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="middle">Luva de Boxe</td>
+                        <td align="left" valign="middle">R$ 179,00</td>
+                        <td align="left" valign="middle">Luvas confortáveis com proteção aprimorada.</td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="middle">Chuteira de Campo</td>
+                        <td align="left" valign="middle">R$ 329,99</td>
+                        <td align="left" valign="middle">Chuteira leve e resistente, ideal para jogos em gramado.</td>
+                        <td align="left" valign="middle">Em estoque</td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="middle">Tenis de corrida</td>
+                        <td align="left" valign="middle">R$ 299,99</td>
+                        <td align="left" valign="middle">Tênis com amortecimento avançado para corridas longas.</td>
+                        <td align="left" valign="middle">Esgotado</td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="middle">Camiseta Dri Fit</td>
+                        <td align="left" valign="middle">R$ 69,99</td>
+                        <td align="left" valign="middle">Camiseta esportiva leve que afasta o suor durante o treino.</td>
+                        <td align="left" valign="middle">Em estoque</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Atendimento e Vendas</h2>
+            <p>Dúvidas ou quer fechar seu pedido? Fale direto com a gente:</p>
+            <p><a href="https://web.whatsapp.com" target="_blank"><strong>[ 💬 COMPRAR AGORA VIA WHATSAPP ]</strong></a></p>
+        </section>
+    </main>
+    <hr>
+
+    <footer>
+        <p><i>"O melhor para seu treino está aqui!"</i> — <small>ProFit Team 2026</small></p>
+    </footer>
+
+</body>
+</html>

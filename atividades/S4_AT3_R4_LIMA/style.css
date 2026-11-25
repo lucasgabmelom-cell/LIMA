@@ -1,0 +1,80 @@
+/* Configurações gerais da página */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+    padding: 20px;
+    line-height: 1.5;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Todos os títulos, links e legendas em azul */
+h1, h2, h3, a, caption, dt {
+    color: #00d2ff;
+}
+
+/* Textos normais em branco */
+p, li, dd, label, small, i {
+    color: #ffffff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #333333;
+    margin: 20px 0;
+}
+
+.produto {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Formulário */
+input, select, textarea, button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 6px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+/* Formatação da tabela para manter títulos em azul e textos em branco */
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+th {
+    color: #00d2ff;
+    border: 1px solid #444444;
+}
+
+td {
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+}
